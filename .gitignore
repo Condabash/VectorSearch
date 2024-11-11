@@ -1,0 +1,10 @@
+# Git Ignore Files #
+
+# OS Waste File
+*.DS_Store
+
+# Env File
+*.env
+
+# Python Cache
+__pycache__
