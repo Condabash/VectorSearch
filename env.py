@@ -12,6 +12,12 @@ load_dotenv(find_dotenv())
 # MongoDB URI
 mongo_uri = os.getenv("MONGO_URI")
 
+# MongoDB Database Name
+mongo_db = os.getenv("MONGO_DB")
+
+# MongoDB Collection Name
+mongo_collection = os.getenv("MONGO_COLLECTION")
+
 # HF Access Token
 hf_token = os.getenv("HF_TOKEN")
 
@@ -35,6 +41,8 @@ index = os.getenv("INDEX")
 
 # Print Env Variables
 # print("MongoDB URI:", mongo_uri)
+# print("MongoDB Database Name:", mongo_db)
+# print("MongoDB Collection Name:", mongo_collection)
 # print("HF Token:", hf_token)
 # print("HF Embedding URL:", hf_embedding_url)
 # print("OpenAI API Key:", openai_api_key)
