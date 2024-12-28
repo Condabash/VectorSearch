@@ -17,7 +17,6 @@ field = e.field
 # Set OpenAI API Key
 openai.api_key = openai_api_key
 
-
 # Generate Embedding Function
 def generate_embedding(text: str) -> list[float]:
     # Using Hugging Face Model
