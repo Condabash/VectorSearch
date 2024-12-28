@@ -11,10 +11,13 @@ field = e.field
 index = e.index
 
 # User Query
-query = "Imaginary characters from outer space at war."
+query = "Give me objects having year 1903 and rated TV-G or Passed"
 
 # Generate Embedding For Query
 query_embedding = generate_embedding(query)
+
+# Print Query Embedding
+print(query_embedding)
 
 # Search Collection
 results = collection.aggregate(
@@ -23,8 +26,8 @@ results = collection.aggregate(
             "$vectorSearch": {
                 "queryVector": query_embedding,
                 "path": field,
-                "numCandidates": 100,
-                "limit": 4,  #
+                "numCandidates": 50, # Number of Candidates 
+                "limit": 50, # Number of Results
                 "index": index,  # Search Index Name
             }
         }
@@ -43,6 +46,8 @@ else:
 
 # Print Results
 for index, document in enumerate(results):
-    print(
-        f'{index}. \nMovie Name: {document["title"]} \nMovie Plot: {document["plot"]}\n'
-    )
+    # Print Object Index
+    print(f' Object-{index}:')
+
+    # Print Document
+    print(document['_id'])
